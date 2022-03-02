@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1e5ab7d7.css",
+    "main.js": "/static/js/main.afdce940.js",
+    "static/media/WhatsApp Video 2022-03-01 at 20.01.37.mp4": "/static/media/WhatsApp Video 2022-03-01 at 20.01.37.e6571abc30dc8017b7a5.mp4",
+    "static/media/wallpapersden.com_genshin-impact-2020_1920x1080.jpg": "/static/media/wallpapersden.com_genshin-impact-2020_1920x1080.7813203791bf0e90b3b9.jpg",
+    "static/media/Genshin-Impact-Logo.png": "/static/media/Genshin-Impact-Logo.7e2a29719f6574b348ab.png",
+    "index.html": "/index.html",
+    "main.1e5ab7d7.css.map": "/static/css/main.1e5ab7d7.css.map",
+    "main.afdce940.js.map": "/static/js/main.afdce940.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e5ab7d7.css",
+    "static/js/main.afdce940.js"
+  ]
+}
