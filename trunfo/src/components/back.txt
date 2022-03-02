@@ -1,0 +1,143 @@
+/*
+<div className="checkSuper">
+<label htmlFor="superT">
+Super Trunfo
+<input
+checked={ cardTrunfo }
+data-testid="trunfo-input"
+name="superT"
+id="super"
+type="checkbox"
+value={ cardTrunfo }
+onChange={ onInputChange }
+/>
+</label>
+</div>
+*/
+
+/*
+cardName={ item.nome }
+cardDescription={ item.descricao }
+cardAttr1={ item.attr01 }
+cardAttr2={ item.attr02 }
+cardAttr3={ item.attr03 }
+cardImage={ item.imagem }
+cardRare={ item.raridade }
+cardTrunfo={ item.superT }
+*/
+
+/*
+(prevState) => ({ banco: [...prevState.banco, data],
+    }));
+*/
+
+/*
+function hasT(prop) {
+    const superTrunf = banco.find((item) => item.superT === true);
+    if (superTrunf) {
+      prop = true;
+      console.log(banco);
+    }
+  }
+
+*/
+
+/*
+const superTrunf = personagens.find((item) => item.superT === true);
+    if (superTrunf) hasTrunfo = true;
+ */
+
+/*
+const ver = banco.some((item) => item.superT === true);
+console.log('ver', ver);
+if (ver === true) {
+    this.setState({ hasTrunfo: true });
+} else {
+    this.setState({ hasTrunfo: false });
+}
+*/
+
+/*
+{ () => {
+                this.setState({
+                  filtro: banco
+                    .filter((card) => card.nome.toLowerCase().includes(filter)),
+                });
+              } }
+*/
+
+/*
+this.setState({
+  searchCard: banco.filter((card) => card.nome.toLowerCase().includes(filter)),
+});
+if (filter.length > 0) {
+  this.setState({
+    renderCard: searchCard,
+  });
+} else if (filter === 0) {
+  this.setState({
+    renderCard: banco,
+  });
+}
+
+removeCard(nome) {
+  const { banco } = this.state;
+  this.setState({
+    banco: banco.filter((item) => item.nome !== nome) });
+}
+
+search() {
+    console.log('ola humano');
+    const { filter, banco } = this.state;
+    const data = banco.filter((card) => card.nome.toLowerCase().includes(filter));
+    console.log(data);
+  }
+
+  onClick={ () => {
+                if (filter.length > 0) {
+                  this.setState({
+                    renderCard: banco
+                      .filter((card) => card.nome.includes(filter)),
+                  });
+                } else {
+                  this.setState({
+                    renderCard: [],
+                  });
+                }
+                if (filter.length === 0 && data.length === 0) {
+                  data = '';
+                  this.setState({
+                    renderCard: [],
+                  });
+                }
+              } }
+
+  verifyTrunfo() {
+    this.setState((prevState) => ({
+      hasTrunfo: prevState.banco.some((item) => item.superT === true),
+    }));
+  }
+
+*/
+
+searchCardSelect = () => {
+  const { banco, filterSelect } = this.state;
+  this.setState((prev) => ({
+    renderCard: banco.filter((card) => card.raridade === prev.filterSelect) }));
+  if (filterSelect === 'todas') {
+    this.setState({
+      renderCard: banco });
+  }
+};
+
+css app
+.mini-cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 10%;
+}

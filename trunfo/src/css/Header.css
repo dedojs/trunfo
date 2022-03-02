@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  align-items: center;
+  background-color: #041c32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.header h1 {
+  font-size: 32px;
+}
+
+.logo {
+  min-width: 300px;
+  width: 30%;
+}
+
+.menu-buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.menu-buttons button {
+  margin-right: 10px;
+}

@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color:#041C32 ;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 20px 0;
+  margin: auto;
+  width: 100%;
+}
+
+.main{
+  background-color: rgb(255, 255, 255);
+  border: 10px solid #7A0BC0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.main-form {
+  align-items: center;
+  background-color: #041C32;
+  border: 10px solid #7A0BC0;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-width: 360px;
+  width: 45%;
+}
+
+.main-card {
+  align-items: center;
+  background-color: #041C32;
+  border: 10px solid #7A0BC0;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-width: 360px;
+  text-align: center;
+  width: 45%;
+}
+
+.main h2 {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.div-cards{
+  align-items: center;
+  background-color: white;
+  border: 10px solid #7A0BC0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.dock {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.secCardsRender {
+  align-items: center;
+  border: 2px solid #7a0bc0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  justify-content: center;
+  padding: 10px;
+  width: 95%;
+}
+
+.card-render {
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  text-align: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.filtro {
+  align-items: center;
+  border: 2px solid #7a0bc0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.filtro input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.filtro select {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.telaInicial {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.video {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.footer {
+  background-color: white;
+  border: 10px solid #7A0BC0;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  width: 91%;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer ul li {
+  padding: 5px;
+}
+
+
+

@@ -1,0 +1,25 @@
+.checkSuper {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 24px;
+  height: 50px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.checkSuper label {
+  margin-top: 10px;
+}
+
+.checkSuper input {
+  align-self: flex-end;
+  justify-content: flex-end;
+  width: 40px;
+}
+
+.quadrado {
+  height: 25px;
+  width: 25px;
+}
