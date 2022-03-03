@@ -5,20 +5,29 @@
 
 .game {
   text-align: center;
-  height: 800px;
 }
 
 .principal {
+  display: flex;
   border:  #7a0bc0 solid 10px;
   border-radius: 10px;
-  text-align: center;
   color: white;
+  flex-direction: column;
+  justify-content: space-around;
   margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
   width: 90%;
 }
 
+.deck-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .deck {
-  border: red solid 2px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -51,18 +60,46 @@
 }
 
 .p1 {
-  border: 2px solid green;
   text-align: center;
   width: 200px;
 }
 
 .p1 h2 {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .selectLabel {
   margin-top: 10px;
   margin-left: 15px;
+}
+
+.placar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.placar h2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.div-result p {
+  color: yellow;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.principal button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resultado {
+  font-size: 36px;
+  font-weight: 900;
+  color: yellow;
 }
 
 

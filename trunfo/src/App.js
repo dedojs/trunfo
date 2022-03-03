@@ -19,8 +19,8 @@ class App extends React.Component {
     
     this.state = { filterSuperT: false,
       renderCard: personagens,
-      baralho: personagens.sort(() => Math.random() - 0.5),
-      baralho2: personagens.sort(() => Math.random() - 0.6),
+      baralho: personagens.sort(() => Math.random() - 0.5).slice(0,16),
+      baralho2: personagens.sort(() => Math.random() - 0.5).slice(30,),
       filter: '',
       nome: '',
       descricao: '',
