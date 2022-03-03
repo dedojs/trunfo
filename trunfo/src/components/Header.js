@@ -5,7 +5,7 @@ import logo from '../images/Genshin-Impact-Logo.png';
 
 export default class Header extends React.Component {
   render() {
-    const { isFormVisible, isFormSearchVisible, isCardsVisible } = this.props;
+    const { isFormVisible, isFormSearchVisible, isCardsVisible, isGameVisible } = this.props;
     return (
       <header className="header">
         <img className="logo" src={ logo } alt="imagem logo" />
@@ -32,7 +32,13 @@ export default class Header extends React.Component {
           >
             Cards
           </button>
-          <button type="submit" className="button">Jogar</button>
+          <button
+            type="submit"
+            className="button"
+            onClick={ isGameVisible }
+          >
+            Jogar
+          </button>
         </div>
       </header>
     );

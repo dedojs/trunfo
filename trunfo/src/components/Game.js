@@ -113,9 +113,12 @@ export default class Game extends React.Component {
 
     reset = () => {
       const { baralho } = this.props
-      this.setState((prev) => ({
+      this.setState(() => ({
         click: 0,
-        click2: baralho.length -1
+        click2: baralho.length -1,
+        resultado: '',
+        pontosp1: 0,
+        pontosp2: 0,
       }))
     }
     

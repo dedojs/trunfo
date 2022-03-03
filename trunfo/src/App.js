@@ -41,6 +41,7 @@ class App extends React.Component {
       isCardsVisible: false,
       isWelcomeVisible: true,
       id: Math.floor((Math.random() * numMaxId) + 1),
+      isGameVisible: false,
     };
   }
 
@@ -190,17 +191,24 @@ class App extends React.Component {
       isWelcomeVisible: !prev.isWelcomeVisible }));
   }
 
+  showGame = () => {
+    this.setState((prev) => ({
+      isGameVisible: !prev.isGameVisible,
+      isWelcomeVisible: !prev.isWelcomeVisible }));
+  }
+
   render() {
     const { filter, renderCard, hasTrunfo, nome, descricao, attr01, attr02, attr03,
       imagem, raridade, superT, isSaveButtonDisabled, filterSelect, filterSuperT,
       filterSelectDisable, filterTextDisable, isFormVisible,
-      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible, baralho, baralho2 } = this.state;
+      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible, baralho, baralho2, isGameVisible } = this.state;
     return (
       <div className="app">
         <Header
           isFormVisible={ this.showForm }
           isFormSearchVisible={ this.showSearch }
           isCardsVisible={ this.showCards }
+          isGameVisible={ this.showGame }
         />
         { isFormVisible ? (
           <section className="main">
@@ -237,10 +245,11 @@ class App extends React.Component {
             </article>
           </section>
         ) : <p />}
-        <div className='game'>
-          <Game baralho={ baralho } baralho2={ baralho2 } />
-          
-        </div>
+        {isGameVisible ? (
+          <div className='game'>
+            <Game baralho={ baralho } baralho2={ baralho2 } />
+          </div>)
+        : <p />}
         <div className="div-cards">
           {isWelcomeVisible ? (
             <div className="telaInicial">
