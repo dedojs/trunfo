@@ -3,19 +3,24 @@ import React from 'react';
 import VideoPlayer from 'react-video-js-player';
 import Header from './components/Header';
 import './index.css';
+import './css/Game.css';
 import Form from './components/Form';
 import Card from './components/Card';
 import personagens from './components/data';
 import Video from './images/WhatsApp Video 2022-03-01 at 20.01.37.mp4';
 import background from './images/wallpapersden.com_genshin-impact-2020_1920x1080.jpg';
 import Footer from './components/Footer';
+import Game from './components/Game';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     const numMaxId = 1000;
+    
     this.state = { filterSuperT: false,
       renderCard: personagens,
+      baralho: personagens.sort(() => Math.random() - 0.5),
+      baralho2: personagens.sort(() => Math.random() - 0.6),
       filter: '',
       nome: '',
       descricao: '',
@@ -54,6 +59,8 @@ class App extends React.Component {
     this.setState((prevState) => ({
       banco: [...prevState.banco, data],
       renderCard: [...prevState.renderCard, data],
+      baralho: [...prevState.renderCard, data],
+      baralho2: [...prevState.renderCard, data],
     }));
     this.setState({ nome: '',
       descricao: '',
@@ -187,7 +194,7 @@ class App extends React.Component {
     const { filter, renderCard, hasTrunfo, nome, descricao, attr01, attr02, attr03,
       imagem, raridade, superT, isSaveButtonDisabled, filterSelect, filterSuperT,
       filterSelectDisable, filterTextDisable, isFormVisible,
-      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible } = this.state;
+      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible, baralho, baralho2 } = this.state;
     return (
       <div className="app">
         <Header
@@ -230,6 +237,10 @@ class App extends React.Component {
             </article>
           </section>
         ) : <p />}
+        <div className='game'>
+          <Game baralho={ baralho } baralho2={ baralho2 } />
+          
+        </div>
         <div className="div-cards">
           {isWelcomeVisible ? (
             <div className="telaInicial">

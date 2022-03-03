@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  text-align: center;
+  height: 800px;
+}
+
+.principal {
+  border:  #7a0bc0 solid 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  width: 90%;
+}
+
+.deck {
+  border: red solid 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.frente {
+  margin-right: 20px;
+}
+
+.verso {
+  align-items: center;
+  background-color: white;
+  background-image: url('../images/Genshin-Impact-Logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+  border: 5px solid #7a0bc0;
+  border-radius: 10px;
+  box-shadow: 2px 10px 5px 5px black;
+  display: flex;
+  height: 550px;
+  justify-content: center;
+  margin-right: 10px;
+  max-height: 700px;
+  max-width: 400px;
+  width: 340px;
+}
+
+.p1 {
+  border: 2px solid green;
+  text-align: center;
+  width: 200px;
+}
+
+.p1 h2 {
+  margin-bottom: 10px;
+}
+
+.selectLabel {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+
