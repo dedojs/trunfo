@@ -38,13 +38,14 @@ export default class Game extends React.Component {
       if (click === baralho.length -1) {
         this.setState((prev) => ({
           click: 0,
-          click2: baralho.length -1
+          click2: baralho.length -1,
         }))
         this.letResultado()
       }
       this.handlePlay()
     }
 
+    
     handlePlay = () => {
       const { baralho, baralho2 } = this.props
       const { jogada, click, click2 } = this.state
@@ -108,7 +109,6 @@ export default class Game extends React.Component {
           resultado: 'O Player 2 é o vencedor',
         }))
       }
-
     }
 
     reset = () => {
@@ -116,9 +116,10 @@ export default class Game extends React.Component {
       this.setState(() => ({
         click: 0,
         click2: baralho.length -1,
-        resultado: '',
         pontosp1: 0,
         pontosp2: 0,
+        resultado: '',
+        round: '',
       }))
     }
     
