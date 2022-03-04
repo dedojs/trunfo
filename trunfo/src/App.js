@@ -292,7 +292,7 @@ class App extends React.Component {
               <div className="card-render">
                 { renderCard
                   .map((item) => (
-                    <div key={ item.id }>
+                    <div key={ item.id } className="div-card">
                       <Card
                         className="mini-cards"
                         key={ item.id }

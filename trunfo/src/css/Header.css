@@ -33,3 +33,124 @@
 .menu-buttons button {
   margin-right: 10px;
 }
+
+@media only screen and (max-width: 960px) {
+  .main {
+    border: 5px solid #7a0bc0;
+    width: 80%;
+  }
+  
+}
+
+@media only screen and (max-width: 960px) {
+
+  .menu-buttons button {
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 3px;
+    width: 80px;
+  }
+
+  .div-cards {
+    border: 5px solid #7a0bc0;
+    margin-top: 10px;
+    padding: 0;
+    width: 90%;
+  }
+
+  .telaInicial {
+    height: 300px;
+  }
+
+  .footer {
+    border: 5px solid #7a0bc0;
+  }
+
+  .main {
+    border: 5px solid #7a0bc0;
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .main-form {
+    border: 5px solid #7a0bc0;
+    font-size: 16px;
+    width: 280px;
+  }
+
+  .form {
+    width: 280px;
+  }
+
+  .select {
+    width: 280px !important;
+  }
+
+  .selectLabel {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    width: 280px !important;
+  }
+
+  #raridade {
+    padding: 2px;
+    width: 120px;
+  }
+
+  .main-card {
+    align-items: start;
+    border: 5px solid #7a0bc0;
+    margin: auto;
+    justify-content: flex-start;
+    height: 100%;
+    width: 280px;
+  }
+
+  .main-card h2 {
+    text-align: center !important;
+    width: 280px;
+  }
+
+  .secCardsRender {
+    border: 0;
+    margin-left: 0;
+    padding: 0;
+    width: 90%;
+  }
+
+  .div-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+  }
+
+  .card-render {
+    width: 95%;
+  }
+
+  .border {
+    margin-right: 0px;
+  }
+
+  .principal h1, h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .deck-header {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .p1 {
+    font-size: 14px;
+    width: 50% !important;
+  }
+
+
+}

@@ -140,7 +140,7 @@ export default class Game extends React.Component {
           <div className='p1'>
               <h2>Player 1</h2>
               <label>Jogada</label>
-              <select type="select" disabled={ p1IsDisabled } name="jogada" className='selectLabel' onChange={ this.onSelectChange }>
+              <select type="select" disabled={ p1IsDisabled } name="jogada"  onChange={ this.onSelectChange }>
                 <option value="ataque">Ataque</option>
                 <option value="defesa">Defesa</option>
                 <option value="vida">Vida</option>
@@ -151,7 +151,7 @@ export default class Game extends React.Component {
           <div className='p1'>
               <h2>Player 2</h2>
               <label>Jogada</label>
-              <select type="select" disabled={ p2IsDisabled } name="jogada" className='selectLabel' onChange={ this.onSelectChange }>
+              <select type="select" disabled={ p2IsDisabled } name="jogada"  onChange={ this.onSelectChange }>
                 <option value="ataque">Ataque</option>
                 <option value="defesa">Defesa</option>
                 <option value="vida">Vida</option>
