@@ -5,12 +5,19 @@ import logo from '../images/Genshin-Impact-Logo.png';
 
 export default class Header extends React.Component {
   render() {
-    const { isFormVisible, isFormSearchVisible, isCardsVisible, isGameVisible } = this.props;
+    const { isFormVisible, isFormSearchVisible, isCardsVisible, isGameVisible, isWelcomeVisible } = this.props;
     return (
       <header className="header">
         <img className="logo" src={ logo } alt="imagem logo" />
         <h1>Super Trunfo</h1>
         <div className="menu-buttons">
+        <button
+            type="submit"
+            className="button"
+            onClick={ isWelcomeVisible }
+          >
+            Home
+          </button>
           <button
             type="submit"
             className="button"

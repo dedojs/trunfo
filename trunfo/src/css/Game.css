@@ -5,6 +5,7 @@
 
 .game {
   text-align: center;
+  width: 100%;
 }
 
 .principal {
@@ -36,9 +37,7 @@
   padding: 20px;
 }
 
-.frente {
-  margin-right: 20px;
-}
+
 
 .verso {
   align-items: center;
@@ -53,15 +52,18 @@
   display: flex;
   height: 550px;
   justify-content: center;
-  margin-right: 10px;
   max-height: 700px;
   max-width: 400px;
   width: 340px;
 }
 
+.zIndex {
+  z-index: 1;
+}
+
 .p1 {
   text-align: center;
-  width: 200px;
+  width: 250px;
 }
 
 .p1 h2 {
@@ -70,8 +72,11 @@
 }
 
 .selectLabel {
+  border-radius: 10px;
   margin-top: 10px;
   margin-left: 15px;
+  padding: 10px;
+  width: 120px;
 }
 
 .placar {
@@ -100,6 +105,25 @@
   font-size: 36px;
   font-weight: 900;
   color: yellow;
+}
+
+.border2 {
+  align-items: center;
+  background-color: rgba(227, 230, 230, 0.835);
+  border: 2px solid #7a0bc0;
+  border-radius: 10px;
+  box-shadow: 2px 10px 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  margin-right: 10px;
+  max-height: 700px;
+  max-width: 400px;
+  width: 340px;
+}
+
+.pontos {
+  color: yellow
 }
 
 

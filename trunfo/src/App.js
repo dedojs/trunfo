@@ -42,6 +42,7 @@ class App extends React.Component {
       isWelcomeVisible: true,
       id: Math.floor((Math.random() * numMaxId) + 1),
       isGameVisible: false,
+      style: -1,
     };
   }
 
@@ -164,47 +165,69 @@ class App extends React.Component {
   }
 
   showForm = () => {
-    const { isFormVisible } = this.state;
     this.setState((prev) => ({
-      isFormVisible: !prev.isFormVisible,
-      isWelcomeVisible: !prev.isWelcomeVisible }));
-    if (isFormVisible === false) {
-      this.setState({
-        isFormVisible: true,
-      });
-    } else {
-      this.setState({
-        isFormVisible: false,
-      });
-    }
+      isFormVisible: true,
+      isWelcomeVisible: false,
+      isFormSearchVisible: false,
+      isCardsVisible: false,
+      isGameVisible: false,
+      style: 1,
+    }));
   }
 
   showSearch = () => {
     this.setState((prev) => ({
-      isWelcomeVisible: true,
-      isFormSearchVisible: !prev.isFormSearchVisible }));
+      isWelcomeVisible: false,
+      isFormSearchVisible: true,
+      isFormVisible: false,
+      isCardsVisible: true,
+      isGameVisible: false,
+
+    }));
   }
 
   showCards = () => {
     this.setState((prev) => ({
-      isCardsVisible: !prev.isCardsVisible,
-      isWelcomeVisible: !prev.isWelcomeVisible }));
+      isCardsVisible: true,
+      isWelcomeVisible: false,
+      isFormSearchVisible: false,
+      isGameVisible: false,
+      isFormVisible: false,
+    }));
   }
 
   showGame = () => {
     this.setState((prev) => ({
-      isGameVisible: !prev.isGameVisible,
-      isWelcomeVisible: !prev.isWelcomeVisible }));
+      isGameVisible: true,
+      isWelcomeVisible: false,
+      isCardsVisible: false,
+      isFormSearchVisible: false,
+      isFormVisible: false,
+      style: -1,
+    }));
+  }
+
+ 
+
+  showWelcome = () => {
+    this.setState((prev) => ({
+      isGameVisible: false,
+      isWelcomeVisible: true,
+      isCardsVisible: false,
+      isFormSearchVisible: false,
+      isFormVisible: false,
+    }));
   }
 
   render() {
     const { filter, renderCard, hasTrunfo, nome, descricao, attr01, attr02, attr03,
       imagem, raridade, superT, isSaveButtonDisabled, filterSelect, filterSuperT,
       filterSelectDisable, filterTextDisable, isFormVisible,
-      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible, baralho, baralho2, isGameVisible } = this.state;
+      isFormSearchVisible, id, isCardsVisible, isWelcomeVisible, baralho, baralho2, isGameVisible, style } = this.state;
     return (
       <div className="app">
         <Header
+          isWelcomeVisible={ this.showWelcome }
           isFormVisible={ this.showForm }
           isFormSearchVisible={ this.showSearch }
           isCardsVisible={ this.showCards }
@@ -233,6 +256,7 @@ class App extends React.Component {
             <article className="main-card">
               <h2>Pré-visualização</h2>
               <Card
+                style={ style }
                 cardName={ nome }
                 cardDescription={ descricao }
                 cardAttr1={ attr01 }

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.69d9141f.css",
-    "main.js": "/static/js/main.d9e52802.js",
+    "main.css": "/static/css/main.1032a36d.css",
+    "main.js": "/static/js/main.d812c5a6.js",
     "static/media/WhatsApp Video 2022-03-01 at 20.01.37.mp4": "/static/media/WhatsApp Video 2022-03-01 at 20.01.37.e6571abc30dc8017b7a5.mp4",
     "static/media/wallpapersden.com_genshin-impact-2020_1920x1080.jpg": "/static/media/wallpapersden.com_genshin-impact-2020_1920x1080.7813203791bf0e90b3b9.jpg",
     "static/media/Genshin-Impact-Logo.png": "/static/media/Genshin-Impact-Logo.7e2a29719f6574b348ab.png",
     "index.html": "/index.html",
-    "main.69d9141f.css.map": "/static/css/main.69d9141f.css.map",
-    "main.d9e52802.js.map": "/static/js/main.d9e52802.js.map"
+    "main.1032a36d.css.map": "/static/css/main.1032a36d.css.map",
+    "main.d812c5a6.js.map": "/static/js/main.d812c5a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.69d9141f.css",
-    "static/js/main.d9e52802.js"
+    "static/css/main.1032a36d.css",
+    "static/js/main.d812c5a6.js"
   ]
 }

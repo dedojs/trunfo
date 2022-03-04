@@ -54,11 +54,11 @@ export default class Game extends React.Component {
           this.setState((prev) => ({
             pontosp1: prev.pontosp1 +1,
           }))
-        } else {
+        } else if (baralho[click].attr01 < baralho2[click2].attr01) {
           this.setState((prev) => ({
             pontosp2: prev.pontosp2 +1,
           }))
-        }
+        } 
         this.setState(() => ({
           round: `Round ${ click +1 } => Ataque => Player 1 = ${baralho[click].attr01} X ${baralho2[click2].attr01} = Player 2`
         }))
@@ -68,7 +68,7 @@ export default class Game extends React.Component {
           this.setState((prev) => ({
             pontosp1: prev.pontosp1 +1,
           }))
-        } else {
+        } else if (baralho[click].attr02 < baralho2[click2].attr02) {
           this.setState((prev) => ({
             pontosp2: prev.pontosp2 +1,
           }))
@@ -82,7 +82,7 @@ export default class Game extends React.Component {
           this.setState((prev) => ({
             pontosp1: prev.pontosp1 +1,
           }))
-        } else {
+        } else if (baralho[click].attr03 < baralho2[click2].attr03) {
           this.setState((prev) => ({
             pontosp2: prev.pontosp2 +1,
           }))
@@ -123,13 +123,18 @@ export default class Game extends React.Component {
     }
     
   render(){
-    const { baralho, baralho2 } = this.props
+    const { baralho, style, baralho2, } = this.props
     const { click, click2, p2IsDisabled, p1IsDisabled, pontosp1, pontosp2, round, resultado } = this.state
     const classe = p1IsDisabled ? 'verso' : 'frente';
     const classe2 = p2IsDisabled ? 'verso' : 'frente';
+    const zIn = p1IsDisabled ? 1 : -1;
     return (
       <div className="principal">
         <h1>Bem Vindo ao Jogo</h1>
+        <div>
+            <h2>Round</h2>
+            <p>{ click +1 }</p>
+        </div>
         <hr></hr>
         <div className='deck-header'>
           <div className='p1'>
@@ -141,12 +146,8 @@ export default class Game extends React.Component {
                 <option value="vida">Vida</option>
               </select>
               <h2>Pontos</h2>
-              <h2>{ pontosp1 } </h2>
+              <h2 className='pontos'>{ pontosp1 } </h2>
             </div>
-          <div>
-              <h2>Round</h2>
-              <p>{ click +1 }</p>
-          </div>
           <div className='p1'>
               <h2>Player 2</h2>
               <label>Jogada</label>
@@ -156,13 +157,14 @@ export default class Game extends React.Component {
                 <option value="vida">Vida</option>
               </select>
               <h2>Pontos</h2>
-              <h2>{ pontosp2 } </h2>
+              <h2 className='pontos'>{ pontosp2 } </h2>
             </div>
         </div>
         <hr></hr>
         <div className="deck">
-          <div className= { classe }>
+          <div className={ classe }>
             <Card
+            style = { -1 }
             cardName={ baralho[click].nome}
             cardDescription={ baralho[click].descricao }
             cardAttr1={ baralho[click].attr01 }
@@ -172,11 +174,11 @@ export default class Game extends React.Component {
             cardRare={ baralho[click].raridade }
             cardTrunfo={ baralho[click].superT }
             />
+            <br></br>
           </div>
-         
-          <div>
             <div className= { classe2 }>
             <Card
+            style= { -1 }
             cardName={ baralho2[click2].nome}
             cardDescription={ baralho2[click2].descricao }
             cardAttr1={ baralho2[click2].attr01 }
@@ -187,8 +189,6 @@ export default class Game extends React.Component {
             cardTrunfo={ baralho2[click2].superT }
             />
             </div>
-          </div>
-       
         </div>
         <hr></hr>
         {resultado

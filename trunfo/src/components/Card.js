@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 export default class Card extends React.Component {
   render() {
     const {
+      style,
       id,
       cardName,
       cardImage,
@@ -16,7 +17,7 @@ export default class Card extends React.Component {
       cardTrunfo,
     } = this.props;
     return (
-      <div className="border">
+      <div className="border" style={{ zIndex: style  }}>
         <p className="id">{ id }</p>
         <h1 data-testid="name-card" className="nome">{ cardName }</h1>
         <div className="img-container">
@@ -29,7 +30,7 @@ export default class Card extends React.Component {
         </div>
         <div className="dados">
           <p data-testid="description-card" className="desc">{ cardDescription }</p>
-          <div className="atributos">
+          <div className="atributos" >
             <p>
               Ataque:
               <input
